@@ -9,7 +9,7 @@ each app, so **do not rename the folders**.
 | Ragafy | <https://zeet-apps.github.io/ragafy/> | <https://zeet-apps.github.io/ragafy/privacy/> |
 | Brain Boost | <https://zeet-apps.github.io/kids-brain-boost/> | <https://zeet-apps.github.io/kids-brain-boost/privacy/> |
 | Music Note Trainer | <https://zeet-apps.github.io/music-note-trainer/> | <https://zeet-apps.github.io/music-note-trainer/privacy/> |
-| Recall | <https://zeet-apps.github.io/recall/> | <https://zeet-apps.github.io/recall/privacy/> |
+| ZeetRecall | <https://zeet-apps.github.io/recall/> | <https://zeet-apps.github.io/recall/privacy/> |
 
 Landing page: <https://zeet-apps.github.io/> · Contact: zeetforfun@gmail.com
 
