@@ -7,9 +7,11 @@ each app, so **do not rename the folders**.
 | App | Home (base URL) | Privacy policy URL |
 |---|---|---|
 | Ragafy | <https://zeet-apps.github.io/ragafy/> | <https://zeet-apps.github.io/ragafy/privacy/> |
-| Brain Boost | <https://zeet-apps.github.io/kids-brain-boost/> | <https://zeet-apps.github.io/kids-brain-boost/privacy/> |
+| ZeetQuest: Quiz for All | <https://zeet-apps.github.io/zeetquest/> | <https://zeet-apps.github.io/zeetquest/privacy/> |
 | Music Note Trainer | <https://zeet-apps.github.io/music-note-trainer/> | <https://zeet-apps.github.io/music-note-trainer/privacy/> |
 | ZeetRecall | <https://zeet-apps.github.io/recall/> | <https://zeet-apps.github.io/recall/privacy/> |
+
+`kids-brain-boost/` (the app's former name, Brain Boost) is kept only as a browser redirect to `zeetquest/` so old store and policy links keep working. It is not a separate app.
 
 Landing page: <https://zeet-apps.github.io/> · Contact: zeetforfun@gmail.com
 
