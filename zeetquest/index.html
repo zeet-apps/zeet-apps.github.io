@@ -20,14 +20,29 @@
   ul { padding-left:22px; }
   a.app { display:block; background:var(--card); border:1px solid var(--line); border-radius:20px; padding:16px 20px; margin-top:16px; text-decoration:none; color:var(--ink); }
   a.app strong { color:var(--accent); font-size:19px; }
+  .hero { text-align:center; padding-bottom:8px; }
+  .hero img { width:112px; height:112px; border-radius:26px; margin:0 auto 16px; display:block; }
+  .buttons { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin:20px 0 4px; }
+  .button { display:inline-flex; flex-direction:column; align-items:center; justify-content:center; min-width:180px; padding:10px 20px; border-radius:14px; text-decoration:none; font-weight:600; line-height:1.25; background:var(--accent); color:var(--page); }
+  .button small { font-weight:500; font-size:13px; opacity:.85; }
+  .button.soon { background:transparent; color:var(--muted); border:1px solid var(--line); cursor:default; }
+  @media (max-width:520px) { .button { width:100%; } }
   nav, footer { font-size:15px; margin-top:32px; }
 </style>
+  <link rel="icon" href="icon.png">
   <link rel="canonical" href="https://zeet-apps.github.io/zeetquest/">
 </head>
 <body>
 <main>
-  <h1>ZeetQuest: Quiz for All</h1>
-  <p>Previously Brain Boost. Short quizzes for curious minds. No accounts, no ads, no tracking.</p>
+  <header class="hero">
+    <img src="icon.png" alt="ZeetQuest app icon" width="112" height="112">
+    <h1>ZeetQuest: Quiz for All</h1>
+    <p>Previously Brain Boost. Short quizzes for curious minds. No accounts, no ads, no tracking.</p>
+    <div class="buttons">
+      <a class="button" id="google-play" href="https://play.google.com/store/apps/details?id=org.zeetapps.kids_brain_boost">Get it on Google Play<small>Android</small></a>
+      <span class="button soon" id="app-store">App Store<small>Coming soon</small></span>
+    </div>
+  </header>
   <h2>About</h2>
   <p>ZeetQuest has thousands of multiple-choice questions across more than twenty subjects: animals, countries and flags, science and space, maths, language, history, music, food and more. Pick a nickname and an age group, and the app shows quizzes and levels that suit you. Finish a level to earn stars and unlock the next one.</p>
   <ul>
@@ -36,7 +51,7 @@
     <li>Your nickname, age group and progress are stored locally; Zeet Apps does not receive them. Device backups depend on your operating-system settings.</li>
   </ul>
   <h2>Get the app</h2>
-  <p><a href="https://play.google.com/store/apps/details?id=org.zeetapps.kids_brain_boost">Google Play</a> · App Store: coming soon</p>
+  <p><a href="https://play.google.com/store/apps/details?id=org.zeetapps.kids_brain_boost">Google Play</a> · App Store: coming soon · <a href="https://www.youtube.com/@ZeetFunTrivia">YouTube trivia videos</a> (ZeetFunTrivia channel; no longer updated)</p>
   <h2>Privacy and support</h2>
   <p>Read the <a href="privacy/">privacy policy</a>. Questions, feedback or problems? Email <a href="mailto:zeetforfun@gmail.com">zeetforfun@gmail.com</a>.</p>
   <p>ZeetQuest: Quiz for All is published by Zeet Apps, the developer name of Balaji Sivakumar, an individual developer based in Ontario, Canada.</p>
