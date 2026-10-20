@@ -25,3 +25,9 @@ WEB-004 complete: Python HTMLParser/Pillow validation passed (4 decodable 660×1
 2026-10-19: Explain supported social URL sharing, recognized sources versus Other and unavailable private-post previews; remove public ad-availability sentence. Validate local HTML/links and copy against app detector and AdRequest. No push authorized in this slice. Status: In progress.
 
 WEB-005 complete: HTML parser/local link checks and whitespace validation pass; copy verified against app source detector and empty ad requests. Removed public availability sentence; clarified automatic SDK collection versus saved-content targeting and preview network requests. Browser visual checks not rerun for text-only changes. No push or deployment.
+
+## WEB-006 — Consistent advertising disclosure (2026-10-19)
+
+Requirement: align Recall home/privacy statements with SDK automatic collection, distinguish saved content from preview requests, avoid claiming denial stops all collection, and remove contradictory no-third-party/no-personal-data claims. Acceptance: both pages name the same categories/purposes, preserve links, and policy covers local profiles/cleanup. Local preparation only. Status: In progress.
+
+WEB-006 complete: compared app AdRequest fields, startup/consent code, preview fetch and current Google Android/iOS disclosure documentation (2026-10-19). Both pages disclose matching categories and purposes; policy corrects blanket non-sharing claims, adds consent limitations, developer identity, local profiles/cleanup and support email processing. HTMLParser/local link/category checks and `git diff --check` pass. No executable changes or packet capture; no assertion that SDK traffic has been measured on a physical device. Provider references: https://developers.google.com/admob/android/privacy/play-data-disclosure and https://developers.google.com/admob/ios/privacy/data-disclosure . Browser visual review remains pending. No push or publication.
