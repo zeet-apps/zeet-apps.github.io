@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zeet Apps</title>
-<meta name="description" content="Apps by Zeet Apps, with privacy policies and support.">
+<meta name="description" content="Independent apps by Balaji Sivakumar in Canada, with app information, privacy policies and support.">
 <style>
   :root { --page:#F4EDE2; --card:#FBF7F0; --ink:#2B2520; --muted:#625950; --heading:#1B3F3B; --accent:#1F5A55; --line:#DCD1C0; }
   @media (prefers-color-scheme: dark) {
@@ -16,7 +16,8 @@
   h1 { font-family: Lora, Georgia, serif; color:var(--heading); font-weight:600; font-size:34px; margin:0 0 8px; }
   h2 { font-family: Lora, Georgia, serif; color:var(--heading); font-weight:600; font-size:22px; margin:28px 0 8px; }
   p, li { color:var(--muted); }
-  a { color:var(--accent); }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+  a:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
   ul { padding-left:22px; }
   a.app { display:block; background:var(--card); border:1px solid var(--line); border-radius:20px; padding:16px 20px; margin-top:16px; text-decoration:none; color:var(--ink); }
   a.app strong { color:var(--accent); font-size:19px; }
@@ -26,7 +27,14 @@
 <body>
 <main>
   <h1>Zeet Apps</h1>
-  <p>Small apps with no accounts and no tracking where we can help it. Each app has its own page, privacy policy and support. Contact: <a href="mailto:zeetforfun@gmail.com">zeetforfun@gmail.com</a></p>
+  <p>Practical apps for learning, music and keeping ideas close.</p>
+  <section aria-labelledby="developer">
+    <h2 id="developer">About the developer</h2>
+    <p>I'm <strong>Balaji Sivakumar</strong>, an independent app developer based in Canada. I publish my apps under the name <strong>Zeet Apps</strong>.</p>
+    <p>This is the official home for my apps, their support information and privacy policies. Each app's page explains its features and how it handles data, including any advertising or network services.</p>
+    <p>For questions, feedback or support, contact me at <a href="mailto:zeetforfun@gmail.com">zeetforfun@gmail.com</a>. Please include the app name, device model and operating system version when reporting a problem.</p>
+  </section>
+  <h2>Explore the apps</h2>
   <a class="app" href="ragafy/"><strong>Ragafy</strong><br>Carnatic lessons you can sing, see and play, with pitch feedback.</a>
   <a class="app" href="recall/"><strong>ZeetRecall</strong><br>Save links from any app, add notes and tags, and find them later.</a>
   <a class="app" href="zeetquest/"><strong>ZeetQuest: Quiz for All</strong><br>Explore animals, countries, science, maths, history and more. Free quizzes, offline and without ads.</a>

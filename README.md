@@ -32,3 +32,7 @@ release that ships the change.
 
 Older standalone policy repos (for example `zeet-apps/journal_app_privacy_policy`) are superseded by the
 `/<app>/privacy/` URLs above.
+
+## Developer identity and ZeetRecall refresh
+
+Local draft prepared 2026-10-19 on `codex/developer-and-recall-pages`: home identifies Balaji Sivakumar as the independent developer in Canada; Recall support page describes current local profiles, sharing, notes/tags/search, cleanup and advertising/network behavior. Stable URLs retained. See `docs/DEVELOPER_PAGES_TRACKER.md` for checks and pending visual acceptance. No deployment in this slice.
