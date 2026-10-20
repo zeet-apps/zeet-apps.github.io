@@ -19,3 +19,9 @@
 Requirement: show four verified current-widget scenes (Sources, Tags, Search, Notes) on the Recall home page with responsive sizing, descriptive alt text, captions and full-size links. Preserve privacy/support links. Use existing synthetic store artwork, no generation or fabricated screens. Acceptance: four images resolve and decode with correct intrinsic dimensions, optimized copies remain readable and existing URLs remain intact. Status: In progress.
 
 WEB-004 complete: Python HTMLParser/Pillow validation passed (4 decodable 660×1434 WebP assets with alt text; every relative image/link target resolves); `git diff --check` passed. Source hashes recorded in recall/images/manifest.json. Existing verified artwork downsampled without cropping; CSS uses intrinsic aspect ratio, two desktop columns and one mobile column. Browser layout verification remains pending under the previously documented browser restriction. No store changes, push or publication in this slice.
+
+## WEB-005 — Supported shared links and precise privacy copy
+
+2026-10-19: Explain supported social URL sharing, recognized sources versus Other and unavailable private-post previews; remove public ad-availability sentence. Validate local HTML/links and copy against app detector and AdRequest. No push authorized in this slice. Status: In progress.
+
+WEB-005 complete: HTML parser/local link checks and whitespace validation pass; copy verified against app source detector and empty ad requests. Removed public availability sentence; clarified automatic SDK collection versus saved-content targeting and preview network requests. Browser visual checks not rerun for text-only changes. No push or deployment.

@@ -7,3 +7,5 @@ See docs/DEVELOPER_PAGES_TRACKER.md.
 - [x] WEB-003 HTML/link/layout verification and local delivery
 
 - [x] WEB-004 Responsive Recall screenshot gallery with verified assets
+
+- [x] WEB-005 Social URL sharing and SDK privacy explanation
