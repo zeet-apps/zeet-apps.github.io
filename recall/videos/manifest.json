@@ -1,0 +1,42 @@
+[
+  {
+    "file": "android-share-poster.jpg",
+    "bytes": 53223,
+    "sha256": "c91d3155b1b6adce2feb27e6d7c71e51740547105d47dcbc86b848643f73dd9c"
+  },
+  {
+    "file": "android-share.gif",
+    "bytes": 555789,
+    "sha256": "dcc18c0f1d957ab3c9ede3e26662ddbeab36d74fc2eaa813db3914906db6ece6"
+  },
+  {
+    "file": "android-share.mp4",
+    "bytes": 710109,
+    "sha256": "899fd114b4d8f978090003b8cb4c250f111795805c2bd03173e5b23d0389996f"
+  },
+  {
+    "file": "android-share.vtt",
+    "bytes": 313,
+    "sha256": "e335c6030cefb1d356e2aadfba6eb5878bb7fb67cc58da7dbaea7f1c9e528f88"
+  },
+  {
+    "file": "iphone-share-poster.jpg",
+    "bytes": 54244,
+    "sha256": "b3f1ef97a46e7e5735fa2c0cba98703d76c10c76424eb2b5b75b6a709731af9f"
+  },
+  {
+    "file": "iphone-share.gif",
+    "bytes": 578244,
+    "sha256": "feac180630145877640902f8c2cf6f88c04b27e72018274e8563733f57a0c9f1"
+  },
+  {
+    "file": "iphone-share.mp4",
+    "bytes": 667140,
+    "sha256": "d5baad5ee7c0ee975ddc7ccbe7c4534a664875b1cbb117d09982f21c2215a098"
+  },
+  {
+    "file": "iphone-share.vtt",
+    "bytes": 288,
+    "sha256": "fa9d30f0011a7c14a7db0190bd619407c4c605b80bf70c9a45c5d82fc62f24a9"
+  }
+]

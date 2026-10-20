@@ -26,6 +26,12 @@
   .screenshots img { display:block; width:100%; height:auto; border-radius:16px; border:1px solid var(--line); }
   .screenshots figcaption { margin-top:10px; color:var(--heading); font-weight:600; }
   @media (max-width:480px) { .screenshots { grid-template-columns:minmax(0,1fr); max-width:330px; margin-inline:auto; } }
+  .tutorials { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-block:24px; }
+  .tutorials article { min-width:0; }
+  .tutorials h3 { color:var(--heading); font-size:20px; }
+  .tutorials video { display:block; width:100%; height:auto; border:1px solid var(--line); border-radius:16px; background:#132120; }
+  .tutorials p { font-size:15px; }
+  @media (max-width:600px) { .tutorials { grid-template-columns:minmax(0,1fr); max-width:350px; margin-inline:auto; } }
   nav, footer { font-size:15px; margin-top:32px; }
 </style>
 </head>
@@ -72,6 +78,33 @@
   <p>Titles and preview images appear when the website provides them. Private or login-required posts may not provide a preview; you can still save their link. Saving a link does not download the video or make private content accessible.</p>
   <p>On iPhone or iPad, use Share in Safari, YouTube, Facebook, Instagram or another app that shares a URL, then choose ZeetRecall. Enable it under More if needed. Add optional tags, tap Save, then return to ZeetRecall to see your link. The Share Extension saves into the profile selected in the app.</p>
   <p>On Android, use Share in YouTube, Facebook, Instagram, your browser or another app that shares a URL, choose ZeetRecall, then finish saving it in the app.</p>
+  <section aria-labelledby="sharing-videos">
+    <h2 id="sharing-videos">Watch how to share a link</h2>
+    <p>Follow the Share button from your browser into ZeetRecall. These short demonstrations use example content on an iPhone simulator and an Android emulator, with test ads. Share menus can look different across apps and operating-system versions.</p>
+    <div class="tutorials">
+      <article>
+        <h3>iPhone: Safari to ZeetRecall</h3>
+        <video controls playsinline preload="none" poster="videos/iphone-share-poster.jpg" width="540" height="1264" aria-label="iPhone link-sharing tutorial">
+          <source src="videos/iphone-share.mp4" type="video/mp4">
+          <track kind="captions" src="videos/iphone-share.vtt" srclang="en" label="English">
+          <a href="videos/iphone-share.mp4">Download the iPhone tutorial</a>.
+        </video>
+        <p>Tap Safari's Share button, choose ZeetRecall (under More if needed), add optional tags and tap Save. Return to ZeetRecall to see the link in the selected profile.</p>
+        <p><a href="videos/iphone-share.mp4">Download video</a> · <a href="videos/iphone-share.gif">View GIF</a></p>
+      </article>
+      <article>
+        <h3>Android: Chrome to ZeetRecall</h3>
+        <video controls playsinline preload="none" poster="videos/android-share-poster.jpg" width="540" height="1260" aria-label="Android link-sharing tutorial">
+          <source src="videos/android-share.mp4" type="video/mp4">
+          <track kind="captions" src="videos/android-share.vtt" srclang="en" label="English">
+          <a href="videos/android-share.mp4">Download the Android tutorial</a>.
+        </video>
+        <p>Open Chrome's menu and tap Share. Choose More or expand the destinations if needed, select ZeetRecall, then tap Save in the app.</p>
+        <p><a href="videos/android-share.mp4">Download video</a> · <a href="videos/android-share.gif">View GIF</a></p>
+      </article>
+    </div>
+    <p>The example website appears under Other. Recognized YouTube, Facebook, Instagram, LinkedIn, X and Reddit domains are grouped under their own source.</p>
+  </section>
   <h2>Your collections, on your device</h2>
   <p>No sign-up is required. Saved links, notes, tags and profile names are stored locally. Profiles organize separate collections on the same device; they are not password-protected accounts. There is no cloud sync or backup export/import in the current release.</p>
   <p>To clear every profile's local content, open Settings &gt; Backup &amp; data &gt; Delete all local data. Type <strong>DELETE</strong> and tap <strong>Delete everything</strong> to confirm. This cannot be undone within the app and does not remove external backups or data held by advertising providers.</p>

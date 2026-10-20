@@ -11,3 +11,5 @@ See docs/DEVELOPER_PAGES_TRACKER.md.
 - [x] WEB-005 Social URL sharing and SDK privacy explanation
 
 - [x] WEB-006 Accurate and consistent advertising/privacy copy
+
+- [x] WEB-007 Genuine iPhone/Android share videos with accessible controlled playback

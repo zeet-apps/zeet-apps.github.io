@@ -36,3 +36,5 @@ Older standalone policy repos (for example `zeet-apps/journal_app_privacy_policy
 ## Developer identity and ZeetRecall refresh
 
 Local draft prepared 2026-10-19 on `codex/developer-and-recall-pages`: home identifies Balaji Sivakumar as the independent developer in Canada; Recall support page describes current local profiles, sharing, notes/tags/search, cleanup and advertising/network behavior. Stable URLs retained. See `docs/DEVELOPER_PAGES_TRACKER.md` for checks and pending visual acceptance. No deployment in this slice.
+
+Recall sharing tutorials are in `recall/videos/`, embedded in the app page with captions, posters and optional GIF links. They show actual simulator UI with synthetic content, not physical-device release testing. Source/export provenance and separate store-preview drafts live in the journal_app repository under `release_notes/videos/` and `tool/video/`.
