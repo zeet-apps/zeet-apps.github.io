@@ -21,6 +21,11 @@
   ul { padding-left:22px; }
   a.app { display:block; background:var(--card); border:1px solid var(--line); border-radius:20px; padding:16px 20px; margin-top:16px; text-decoration:none; color:var(--ink); }
   a.app strong { color:var(--accent); font-size:19px; }
+  .screenshots { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin:24px 0 36px; }
+  .screenshots figure { margin:0; min-width:0; }
+  .screenshots img { display:block; width:100%; height:auto; border-radius:16px; border:1px solid var(--line); }
+  .screenshots figcaption { margin-top:10px; color:var(--heading); font-weight:600; }
+  @media (max-width:480px) { .screenshots { grid-template-columns:minmax(0,1fr); max-width:330px; margin-inline:auto; } }
   nav, footer { font-size:15px; margin-top:32px; }
 </style>
 </head>
@@ -38,6 +43,29 @@
     <li>Create local profiles with separate saves, notes and tags</li>
     <li>Delete individual saves or clear all local content with confirmation</li>
   </ul>
+  <section aria-labelledby="screenshots-heading">
+    <h2 id="screenshots-heading">A look inside ZeetRecall</h2>
+    <p>Browse your sources, organize tags, search for a saved idea and keep a personal note. Tap an image for a larger view.</p>
+    <div class="screenshots">
+      <figure>
+        <a href="images/01-sources.webp" aria-label="View browse by source screenshot"><img src="images/01-sources.webp" width="660" height="1434" alt="ZeetRecall Sources screen grouping saved links by app." loading="lazy" decoding="async"></a>
+        <figcaption>Browse by source</figcaption>
+      </figure>
+      <figure>
+        <a href="images/02-tags.webp" aria-label="View organize with tags screenshot"><img src="images/02-tags.webp" width="660" height="1434" alt="ZeetRecall Tags screen showing Creativity, Learning and Weekend collections." loading="lazy" decoding="async"></a>
+        <figcaption>Organize with tags</figcaption>
+      </figure>
+      <figure>
+        <a href="images/03-search.webp" aria-label="View find a saved idea screenshot"><img src="images/03-search.webp" width="660" height="1434" alt="ZeetRecall search results for Creativity with saved links and notes." loading="lazy" decoding="async"></a>
+        <figcaption>Find a saved idea</figcaption>
+      </figure>
+      <figure>
+        <a href="images/04-notes.webp" aria-label="View keep your thoughts screenshot"><img src="images/04-notes.webp" width="660" height="1434" alt="ZeetRecall item detail with an editable journal note and tags." loading="lazy" decoding="async"></a>
+        <figcaption>Keep your thoughts</figcaption>
+      </figure>
+    </div>
+    <p>App screens shown with example content, framed for the store listing.</p>
+  </section>
   <h2>How to save a link</h2>
   <p>In ZeetRecall, tap <strong>Save Link</strong>, paste a public webpage URL, add optional details and save. Page titles and images appear when the website provides them; you can still save a link without a preview.</p>
   <p>On iPhone or iPad, open a webpage in Safari, tap Share and choose ZeetRecall. Enable it under More if needed. Add optional tags, tap Save, then return to ZeetRecall to see your link. The Share Extension saves into the profile selected in the app.</p>

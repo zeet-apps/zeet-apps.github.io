@@ -1,0 +1,34 @@
+[
+  {
+    "source": "journal_app/store/ios/screenshots/en-US/iPhone-6.9-01-sources.png",
+    "source_sha256": "3c94d82cef2b55edba935dd82f98f5ef1ead021ef44eacacd97697dcb74695cb",
+    "asset": "images/01-sources.webp",
+    "width": 660,
+    "height": 1434,
+    "bytes": 30162
+  },
+  {
+    "source": "journal_app/store/ios/screenshots/en-US/iPhone-6.9-02-tags.png",
+    "source_sha256": "cc03b25f7be196b7925a040ccd2cc116fc8c32bd54ff0113d8dd0c2dcbd6493b",
+    "asset": "images/02-tags.webp",
+    "width": 660,
+    "height": 1434,
+    "bytes": 28162
+  },
+  {
+    "source": "journal_app/store/ios/screenshots/en-US/iPhone-6.9-03-search.png",
+    "source_sha256": "c537d6ef332f4d2dd917603515515593b2d0605ec6e3c21058bbbd41684e0cf9",
+    "asset": "images/03-search.webp",
+    "width": 660,
+    "height": 1434,
+    "bytes": 33296
+  },
+  {
+    "source": "journal_app/store/ios/screenshots/en-US/iPhone-6.9-04-notes.png",
+    "source_sha256": "4b7a3e92e6714ea85d5abe9c67c89d50df1f225fb39d3929a7ccc420aa8f6acc",
+    "asset": "images/04-notes.webp",
+    "width": 660,
+    "height": 1434,
+    "bytes": 43762
+  }
+]
