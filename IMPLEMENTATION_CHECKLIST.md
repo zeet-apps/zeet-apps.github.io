@@ -13,3 +13,6 @@ See docs/DEVELOPER_PAGES_TRACKER.md.
 - [x] WEB-006 Accurate and consistent advertising/privacy copy
 
 - [x] WEB-007 Genuine iPhone/Android share videos with accessible controlled playback
+
+- [x] WEB-008 Againlings home and privacy pages plus landing card (published 2026-10-24 with release-tools)
+- [x] WEB-009 Againlings screenshot gallery on the app home page (8 real screenshots, WebP, published 2026-10-24)
