@@ -21,6 +21,12 @@
   ul { padding-left:22px; }
   a.app { display:block; background:var(--card); border:1px solid var(--line); border-radius:20px; padding:16px 20px; margin-top:16px; text-decoration:none; color:var(--ink); }
   a.app strong { color:var(--accent); font-size:19px; }
+  .screenshots { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin:24px 0 36px; }
+  .screenshots figure { margin:0; min-width:0; }
+  .screenshots img { display:block; width:100%; height:auto; border-radius:16px; border:1px solid var(--line); }
+  .screenshots figcaption { margin-top:10px; color:var(--heading); font-weight:600; }
+  .screenshots figcaption span { display:block; font-weight:400; color:var(--muted); font-size:15px; }
+  @media (max-width:600px) { .screenshots { grid-template-columns:minmax(0,1fr); } }
   nav, footer { font-size:15px; margin-top:32px; }
 </style>
 </head>
@@ -38,6 +44,44 @@
     <li>Three stars per level for finishing in the target number of runs</li>
     <li>A How to play page inside the game; no account or sign-up</li>
   </ul>
+  <section aria-labelledby="screenshots-heading">
+    <h2 id="screenshots-heading">A look inside Againlings</h2>
+    <p>Real screens from the game: ghosts holding plates, a heavy plate, a wall climbed on a ghost, the level list and the Daily level.</p>
+    <div class="screenshots">
+      <figure>
+        <img src="images/01-team-up.webp" width="1280" height="720" alt="Againlings level Double Duty in run 3: two recorded ghosts stand in the room while the live player jumps toward a coin." loading="lazy" decoding="async">
+        <figcaption>Your past runs. Your next teammates.<span>Replay your moves as friendly ghosts.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="images/02-open-doors.webp" width="1280" height="720" alt="Againlings level First Echo: a ghost stands on a plate and holds the door open for the player." loading="lazy" decoding="async">
+        <figcaption>Leave a ghost. Open a door.<span>Let your past self hold the switch.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="images/03-ghost-steps.webp" width="1280" height="720" alt="Againlings level Step Up: the player stands on a recorded ghost to get over a wall." loading="lazy" decoding="async">
+        <figcaption>Give yourself a lift.<span>Jump on your ghosts to reach higher.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="images/04-heavy-plates.webp" width="1280" height="720" alt="Againlings level Heavy Load: two overlapping ghosts press a heavy plate and open the door." loading="lazy" decoding="async">
+        <figcaption>Some switches need two of you.<span>Team up to activate heavy plates.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="images/05-find-a-way.webp" width="1280" height="720" alt="Againlings level Two Roads: the player climbs a ledge toward a coin, with another route through the door." loading="lazy" decoding="async">
+        <figcaption>Find your own way through.<span>Climb for coins or take another route.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="images/06-perfect-clear.webp" width="1280" height="720" alt="The Againlings Solved panel: three stars, two of two coins collected and a perfect finish." loading="lazy" decoding="async">
+        <figcaption>A little planning. A perfect clear.<span>Collect every coin at the target number of runs.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="images/07-worlds.webp" width="1280" height="720" alt="The Againlings level list for World 1, showing earned stars and best times on the level tiles." loading="lazy" decoding="async">
+        <figcaption>100 levels. More ways to think.<span>Earn stars, improve your time and unlock worlds.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="images/08-daily.webp" width="1280" height="720" alt="The Againlings Daily level for October 24: ghosts, coins, a door and a tall wall." loading="lazy" decoding="async">
+        <figcaption>A fresh puzzle every day.<span>Come back for a new ghost-team challenge.</span></figcaption>
+      </figure>
+    </div>
+  </section>
   <h2>Your progress stays on your device</h2>
   <p>Finished levels, stars and best times are stored locally. There is no account and no Againlings server. Uninstalling the game removes them.</p>
   <h2>Free with advertising</h2>
