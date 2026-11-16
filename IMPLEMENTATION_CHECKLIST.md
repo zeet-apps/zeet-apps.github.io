@@ -18,3 +18,5 @@ See docs/DEVELOPER_PAGES_TRACKER.md.
 - [x] WEB-009 Againlings screenshot gallery on the app home page (8 real screenshots, WebP, published 2026-10-24)
 
 - [x] WEB-010 Beta testing page (/beta/) for Ragafy, ZeetRecall, Againlings: Android closed testing and iPhone TestFlight interest by email; linked from the landing page
+
+- [x] WEB-011 Richer landing page: hero, app cards with images and status, separate beta-testing section

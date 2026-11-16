@@ -6,42 +6,78 @@
 <title>Zeet Apps</title>
 <meta name="description" content="Independent apps by Balaji Sivakumar in Canada, with app information, privacy policies and support.">
 <style>
-  :root { --page:#F4EDE2; --card:#FBF7F0; --ink:#2B2520; --muted:#625950; --heading:#1B3F3B; --accent:#1F5A55; --line:#DCD1C0; }
+  :root { --page:#F4EDE2; --card:#FBF7F0; --ink:#2B2520; --muted:#625950; --heading:#1B3F3B; --accent:#1F5A55; --line:#DCD1C0; --onaccent:#FFFFFF; --hero1:#E6F0EA; --hero2:#F4EDE2; --warm:#B5651D; --chip:#E4EEE9; --chipink:#1B3F3B; }
   @media (prefers-color-scheme: dark) {
-    :root { --page:#132120; --card:#1C2C2A; --ink:#ECE4D6; --muted:#B8AE9F; --heading:#F1E6D0; --accent:#7FC4B7; --line:#334542; }
+    :root { --page:#132120; --card:#1C2C2A; --ink:#ECE4D6; --muted:#B8AE9F; --heading:#F1E6D0; --accent:#7FC4B7; --line:#334542; --onaccent:#132120; --hero1:#1B3532; --hero2:#132120; --warm:#E3A261; --chip:#26403C; --chipink:#CFE9E2; }
   }
   * { box-sizing: border-box; }
   body { margin:0; background:var(--page); color:var(--ink); font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-  main { max-width:760px; margin:0 auto; padding:40px 16px 64px; }
-  h1 { font-family: Lora, Georgia, serif; color:var(--heading); font-weight:600; font-size:34px; margin:0 0 8px; }
-  h2 { font-family: Lora, Georgia, serif; color:var(--heading); font-weight:600; font-size:22px; margin:28px 0 8px; }
+  .hero { background:linear-gradient(180deg,var(--hero1),var(--hero2)); border-bottom:1px solid var(--line); }
+  .wrap { max-width:960px; margin:0 auto; padding:0 16px; }
+  .hero .wrap { padding-top:56px; padding-bottom:44px; }
+  .eyebrow { text-transform:uppercase; letter-spacing:.12em; font-size:13px; font-weight:700; color:var(--accent); margin:0 0 8px; }
+  h1 { font-family: Lora, Georgia, serif; color:var(--heading); font-weight:600; font-size:clamp(34px,6vw,52px); line-height:1.1; margin:0 0 12px; }
+  h2 { font-family: Lora, Georgia, serif; color:var(--heading); font-weight:600; font-size:26px; margin:0 0 6px; }
+  .lead { font-size:19px; color:var(--muted); max-width:620px; margin:0 0 20px; }
   p, li { color:var(--muted); }
   a { color:var(--accent); overflow-wrap:anywhere; }
   a:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
-  ul { padding-left:22px; }
-  a.app { display:block; background:var(--card); border:1px solid var(--line); border-radius:20px; padding:16px 20px; margin-top:16px; text-decoration:none; color:var(--ink); }
-  a.app strong { color:var(--accent); font-size:19px; }
-  nav, footer { font-size:15px; margin-top:32px; }
+  .btn { display:inline-block; background:var(--accent); color:var(--onaccent); text-decoration:none; font-weight:600; padding:10px 20px; border-radius:999px; min-height:44px; }
+  .btn.ghost { background:transparent; color:var(--accent); border:2px solid var(--accent); }
+  section { padding:40px 0 8px; }
+  .sub { margin:0 0 20px; }
+  .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr)); }
+  a.app { display:flex; gap:16px; align-items:flex-start; background:var(--card); border:1px solid var(--line); border-radius:20px; padding:16px; text-decoration:none; color:var(--ink); transition:transform .15s, box-shadow .15s; }
+  a.app:hover { transform:translateY(-2px); box-shadow:0 8px 22px rgba(0,0,0,.12); }
+  .thumb { flex:none; width:88px; height:88px; border-radius:20px; object-fit:cover; object-position:top; background:var(--chip); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--accent); }
+  .app strong { display:block; color:var(--heading); font-family:Lora,Georgia,serif; font-size:20px; line-height:1.25; }
+  .app span.d { display:block; color:var(--muted); font-size:16px; margin:4px 0 8px; }
+  .chip { display:inline-block; font-size:13px; font-weight:600; padding:2px 10px; border-radius:999px; background:var(--chip); color:var(--chipink); }
+  .chip.beta { background:transparent; border:1px solid var(--warm); color:var(--warm); }
+  .beta-band { margin-top:40px; background:var(--card); border:2px dashed var(--line); border-radius:24px; padding:28px 24px; display:flex; flex-wrap:wrap; gap:16px 28px; align-items:center; justify-content:space-between; }
+  .beta-band p { margin:0; max-width:520px; }
+  .about { padding-bottom:8px; }
+  footer { font-size:15px; padding:32px 0 56px; }
+  @media (prefers-reduced-motion: reduce) { a.app { transition:none; } a.app:hover { transform:none; } }
 </style>
 </head>
 <body>
-<main>
-  <h1>Zeet Apps</h1>
-  <p>Practical apps for learning, music and keeping ideas close.</p>
-  <section aria-labelledby="developer">
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Independent apps · Made in Canada</p>
+    <h1>Zeet Apps</h1>
+    <p class="lead">Practical apps for learning, music and keeping ideas close. Small, focused and respectful of your data.</p>
+    <a class="btn" href="#apps">Explore the apps</a>
+  </div>
+</header>
+<main class="wrap">
+  <section id="apps" aria-labelledby="apps-h">
+    <h2 id="apps-h">Our apps</h2>
+    <p class="sub">Each app has its own page with features, screenshots, support and privacy policy.</p>
+    <div class="grid">
+      <a class="app" href="ragafy/"><img class="thumb" src="ragafy/icon.png" alt="" width="88" height="88"><span><strong>Ragafy</strong><span class="d">Carnatic lessons you can sing, see and play, with pitch feedback.</span><span class="chip beta">Coming soon · in beta</span></span></a>
+      <a class="app" href="recall/"><img class="thumb" src="recall/images/01-sources.webp" alt="" width="88" height="88" loading="lazy"><span><strong>ZeetRecall</strong><span class="d">Save links from any app, add notes and tags, and find them later.</span><span class="chip beta">Coming soon · in beta</span></span></a>
+      <a class="app" href="againlings/"><img class="thumb" src="againlings/images/01-team-up.webp" alt="" width="88" height="88" loading="lazy"><span><strong>Againlings</strong><span class="d">A friendly ghost platformer. Every run you finish becomes a ghost that helps in the next.</span><span class="chip beta">Coming soon · in beta</span></span></a>
+      <a class="app" href="zeetquest/"><img class="thumb" src="zeetquest/icon.png" alt="" width="88" height="88"><span><strong>ZeetQuest: Quiz for All</strong><span class="d">Animals, countries, science, maths, history and more. Free quizzes, offline and without ads.</span><span class="chip">On Google Play and App Store</span></span></a>
+      <a class="app" href="music-note-trainer/"><span class="thumb" aria-hidden="true">♪</span><span><strong>Music Note Trainer</strong><span class="d">Learn music staff notation through interactive lessons.</span><span class="chip">Learn more</span></span></a>
+    </div>
+  </section>
+
+  <aside class="beta-band" aria-labelledby="beta-h">
+    <div>
+      <h2 id="beta-h">Help test what's next</h2>
+      <p>Try Ragafy, ZeetRecall and Againlings before release on Android or iPhone, and tell me what to improve.</p>
+    </div>
+    <a class="btn ghost" href="beta/">Join the beta</a>
+  </aside>
+
+  <section class="about" aria-labelledby="developer">
     <h2 id="developer">About the developer</h2>
     <p>I'm <strong>Balaji Sivakumar</strong>, an independent app developer based in Canada. I publish my apps under the name <strong>Zeet Apps</strong>.</p>
     <p>This is the official home for my apps, their support information and privacy policies. Each app's page explains its features and how it handles data, including any advertising or network services.</p>
     <p>For questions, feedback or support, contact me at <a href="mailto:zeetforfun@gmail.com">zeetforfun@gmail.com</a>. Please include the app name, device model and operating system version when reporting a problem.</p>
   </section>
-  <h2>Explore the apps</h2>
-  <a class="app" href="ragafy/"><strong>Ragafy</strong><br>Carnatic lessons you can sing, see and play, with pitch feedback.</a>
-  <a class="app" href="recall/"><strong>ZeetRecall</strong><br>Save links from any app, add notes and tags, and find them later.</a>
-  <a class="app" href="zeetquest/"><strong>ZeetQuest: Quiz for All</strong><br>Explore animals, countries, science, maths, history and more. Free quizzes, offline and without ads.</a>
-  <a class="app" href="music-note-trainer/"><strong>Music Note Trainer</strong><br>Learn music staff notation through interactive lessons.</a>
-
-  <a class="app" href="againlings/"><strong>Againlings</strong><br>A friendly ghost platformer. Every run you finish becomes a ghost that helps in the next.</a>
-  <a class="app" href="beta/"><strong>Beta testing</strong><br>Try Ragafy, ZeetRecall and Againlings before release and share feedback.</a>
+  <footer>© Zeet Apps · <a href="mailto:zeetforfun@gmail.com">Contact</a> · <a href="beta/">Beta testing</a></footer>
 </main>
 </body>
 </html>
