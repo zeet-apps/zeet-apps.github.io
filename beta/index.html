@@ -6,54 +6,85 @@
 <title>Beta testing | Zeet Apps</title>
 <meta name="description" content="Try upcoming Zeet Apps before they are released and tell me what to improve. Android closed testing and iPhone TestFlight.">
 <style>
-  :root { --page:#F4EDE2; --card:#FBF7F0; --ink:#2B2520; --muted:#625950; --heading:#1B3F3B; --accent:#1F5A55; --line:#DCD1C0; --onaccent:#FFFFFF; }
+  :root { --page:#F4EDE2; --card:#FBF7F0; --ink:#2B2520; --muted:#625950; --heading:#1B3F3B; --accent:#1F5A55; --line:#DCD1C0; --onaccent:#FFFFFF; --hero1:#E6F0EA; --hero2:#F4EDE2; --warm:#B5651D; --chip:#E4EEE9; --chipink:#1B3F3B; }
   @media (prefers-color-scheme: dark) {
-    :root { --page:#132120; --card:#1C2C2A; --ink:#ECE4D6; --muted:#B8AE9F; --heading:#F1E6D0; --accent:#7FC4B7; --line:#334542; --onaccent:#132120; }
+    :root { --page:#132120; --card:#1C2C2A; --ink:#ECE4D6; --muted:#B8AE9F; --heading:#F1E6D0; --accent:#7FC4B7; --line:#334542; --onaccent:#132120; --hero1:#1B3532; --hero2:#132120; --warm:#E3A261; --chip:#26403C; --chipink:#CFE9E2; }
   }
   * { box-sizing: border-box; }
   body { margin:0; background:var(--page); color:var(--ink); font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-  main { max-width:760px; margin:0 auto; padding:40px 16px 64px; }
-  h1 { font-family: Lora, Georgia, serif; color:var(--heading); font-weight:600; font-size:34px; margin:0 0 8px; }
-  h2 { font-family: Lora, Georgia, serif; color:var(--heading); font-weight:600; font-size:22px; margin:0 0 8px; }
+  .hero { background:linear-gradient(180deg,var(--hero1),var(--hero2)); border-bottom:1px solid var(--line); }
+  .wrap { max-width:960px; margin:0 auto; padding:0 16px; }
+  .hero .wrap { padding-top:56px; padding-bottom:44px; }
+  .eyebrow { text-transform:uppercase; letter-spacing:.12em; font-size:13px; font-weight:700; color:var(--accent); margin:0 0 8px; }
+  h1 { font-family: Lora, Georgia, serif; color:var(--heading); font-weight:600; font-size:clamp(34px,6vw,52px); line-height:1.1; margin:0 0 12px; }
+  h2 { font-family: Lora, Georgia, serif; color:var(--heading); font-weight:600; font-size:26px; margin:0 0 6px; }
+  .lead { font-size:19px; color:var(--muted); max-width:620px; margin:0 0 20px; }
   p, li { color:var(--muted); }
   a { color:var(--accent); overflow-wrap:anywhere; }
   a:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:16px 20px; margin-top:16px; }
-  .row { display:flex; flex-wrap:wrap; gap:12px; }
-  .btn { display:inline-block; background:var(--accent); color:var(--onaccent); text-decoration:none; font-weight:600; padding:10px 18px; border-radius:999px; min-height:44px; }
-  footer { font-size:15px; margin-top:32px; }
+  .btn { display:inline-block; background:var(--accent); color:var(--onaccent); text-decoration:none; font-weight:600; padding:10px 20px; border-radius:999px; min-height:44px; }
+  .btn.ghost { background:transparent; color:var(--accent); border:2px solid var(--accent); }
+  section { padding:40px 0 8px; }
+  .sub { margin:0 0 20px; }
+  .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr)); }
+  .app { display:flex; gap:16px; align-items:flex-start; background:var(--card); border:1px solid var(--line); border-radius:20px; padding:16px; text-decoration:none; color:var(--ink); transition:transform .15s, box-shadow .15s; }
+  .app:hover { transform:translateY(-2px); box-shadow:0 8px 22px rgba(0,0,0,.12); }
+  .thumb { flex:none; width:88px; height:88px; border-radius:20px; object-fit:cover; object-position:top; background:var(--chip); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--accent); }
+  .app strong { display:block; color:var(--heading); font-family:Lora,Georgia,serif; font-size:20px; line-height:1.25; }
+  .app span.d { display:block; color:var(--muted); font-size:16px; margin:4px 0 8px; }
+  .chip { display:inline-block; font-size:13px; font-weight:600; padding:2px 10px; border-radius:999px; background:var(--chip); color:var(--chipink); }
+  .chip.beta { background:transparent; border:1px solid var(--warm); color:var(--warm); }
+  .beta-band { margin-top:40px; background:var(--card); border:2px dashed var(--line); border-radius:24px; padding:28px 24px; display:flex; flex-wrap:wrap; gap:16px 28px; align-items:center; justify-content:space-between; }
+  .beta-band p { margin:0; max-width:520px; }
+  .about { padding-bottom:8px; }
+  footer { font-size:15px; padding:32px 0 56px; }
+  @media (prefers-reduced-motion: reduce) { a.app { transition:none; } a.app:hover { transform:none; } }
+  .card { display:block; }
+  .app { cursor:default; }
+  .app:hover { transform:none; box-shadow:none; }
+  .actions { display:flex; flex-wrap:wrap; gap:10px; margin:8px 0 6px; }
+  .btn { padding:8px 16px; }
+  .small { font-size:14px; margin:6px 0 0; }
+  .steps { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); margin:0; padding:0; list-style:none; }
+  .steps li { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:16px; }
+  .steps strong { color:var(--heading); display:block; font-family:Lora,Georgia,serif; font-size:18px; }
 </style>
 </head>
 <body>
-<main>
-  <h1>Beta testing</h1>
-  <p>Help me shape apps before they are released. Pick an app and your phone, send me a short email, and I will send you an invitation.</p>
-  <h2>How it works</h2>
-  <ul>
-    <li><strong>Android:</strong> I add the email you use for Google Play to a closed test. You then open the test link, accept it, and install from Google Play.</li>
-    <li><strong>iPhone:</strong> I invite you to TestFlight, Apple's free testing app. Install TestFlight first, then open my invitation.</li>
-    <li><strong>What I ask:</strong> use the app as you normally would and send me what felt confusing, broken or missing.</li>
-  </ul>
-  <h2>Apps you can test</h2>
-  <section class="card" id="ragafy" aria-labelledby="h-ragafy">
-    <h2 id="h-ragafy">Ragafy</h2>
-    <p>Carnatic lessons you can sing, see and play, with pitch feedback. <a href="../ragafy/">About Ragafy</a></p>
-    <p class="row"><a class="btn" href="mailto:zeetforfun@gmail.com?subject=Ragafy%20beta%20%28Android%29&body=Hi%2C%20I%20would%20like%20to%20test%20Ragafy%20on%20Android.%0A%0AThe%20email%20I%20use%20for%20Google%20Play%3A%20%0ADevice%20model%20and%20OS%20version%3A%20%0A">Join on Android</a> <a class="btn" href="mailto:zeetforfun@gmail.com?subject=Ragafy%20beta%20%28iPhone%29&body=Hi%2C%20I%20would%20like%20to%20test%20Ragafy%20on%20iPhone.%0A%0AThe%20email%20I%20use%20for%20TestFlight%20/%20Apple%20ID%3A%20%0ADevice%20model%20and%20OS%20version%3A%20%0A">Join on iPhone</a></p>
-    <p>Already invited on Android? <a href="https://play.google.com/apps/testing/dev.balaji.music_learning_app">Open the Google Play test link</a>.</p>
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Zeet Apps · Beta testing</p>
+    <h1>Help shape what's next</h1>
+    <p class="lead">Try apps before they are released and tell me what felt confusing, broken or missing. Pick an app and your phone, send a short email, and I will send you an invitation.</p>
+    <a class="btn" href="#apps">Choose an app</a>
+  </div>
+</header>
+<main class="wrap">
+  <section aria-labelledby="how-h">
+    <h2 id="how-h">How it works</h2>
+    <p class="sub">Free, and you can leave at any time.</p>
+    <ul class="steps">
+      <li><strong>Android</strong>I add the email you use for Google Play to a closed test. You then open the test link, accept it, and install from Google Play.</li>
+      <li><strong>iPhone</strong>I invite you to TestFlight, Apple's free testing app. Install TestFlight first, then open my invitation.</li>
+      <li><strong>What I ask</strong>Use the app as you normally would and send me what felt confusing, broken or missing.</li>
+    </ul>
   </section>
-  <section class="card" id="recall" aria-labelledby="h-recall">
-    <h2 id="h-recall">ZeetRecall</h2>
-    <p>Save links from any app, add notes and tags, and find them later. <a href="../recall/">About ZeetRecall</a></p>
-    <p class="row"><a class="btn" href="mailto:zeetforfun@gmail.com?subject=ZeetRecall%20beta%20%28Android%29&body=Hi%2C%20I%20would%20like%20to%20test%20ZeetRecall%20on%20Android.%0A%0AThe%20email%20I%20use%20for%20Google%20Play%3A%20%0ADevice%20model%20and%20OS%20version%3A%20%0A">Join on Android</a> <a class="btn" href="mailto:zeetforfun@gmail.com?subject=ZeetRecall%20beta%20%28iPhone%29&body=Hi%2C%20I%20would%20like%20to%20test%20ZeetRecall%20on%20iPhone.%0A%0AThe%20email%20I%20use%20for%20TestFlight%20/%20Apple%20ID%3A%20%0ADevice%20model%20and%20OS%20version%3A%20%0A">Join on iPhone</a></p>
-    <p>Already invited on Android? <a href="https://play.google.com/apps/testing/com.zeetapps.journalapp">Open the Google Play test link</a>.</p>
+  <section id="apps" aria-labelledby="apps-h">
+    <h2 id="apps-h">Apps you can test</h2>
+    <p class="sub">Each button opens an email to me with the app and phone filled in.</p>
+    <div class="grid">
+      <div class="app" id="ragafy"><img class="thumb" src="../ragafy/icon.png" alt="" width="88" height="88"><span><strong>Ragafy</strong><span class="d">Carnatic lessons you can sing, see and play, with pitch feedback. <a href="../ragafy/">About Ragafy</a></span>
+        <span class="actions"><a class="btn" href="mailto:zeetforfun@gmail.com?subject=Ragafy%20beta%20%28Android%29&body=Hi%2C%20I%20would%20like%20to%20test%20Ragafy%20on%20Android.%0A%0AThe%20email%20I%20use%20for%20Google%20Play%3A%20%0ADevice%20model%20and%20OS%20version%3A%20%0A">Join on Android</a><a class="btn" href="mailto:zeetforfun@gmail.com?subject=Ragafy%20beta%20%28iPhone%29&body=Hi%2C%20I%20would%20like%20to%20test%20Ragafy%20on%20iPhone.%0A%0AThe%20email%20I%20use%20for%20TestFlight%20/%20Apple%20ID%3A%20%0ADevice%20model%20and%20OS%20version%3A%20%0A">Join on iPhone</a></span>
+        <span class="small d">Already invited on Android? <a href="https://play.google.com/apps/testing/dev.balaji.music_learning_app">Open the Google Play test link</a>.</span></span></div>
+      <div class="app" id="recall"><img class="thumb" src="../recall/images/01-sources.webp" alt="" width="88" height="88"><span><strong>ZeetRecall</strong><span class="d">Save links from any app, add notes and tags, and find them later. <a href="../recall/">About ZeetRecall</a></span>
+        <span class="actions"><a class="btn" href="mailto:zeetforfun@gmail.com?subject=ZeetRecall%20beta%20%28Android%29&body=Hi%2C%20I%20would%20like%20to%20test%20ZeetRecall%20on%20Android.%0A%0AThe%20email%20I%20use%20for%20Google%20Play%3A%20%0ADevice%20model%20and%20OS%20version%3A%20%0A">Join on Android</a><a class="btn" href="mailto:zeetforfun@gmail.com?subject=ZeetRecall%20beta%20%28iPhone%29&body=Hi%2C%20I%20would%20like%20to%20test%20ZeetRecall%20on%20iPhone.%0A%0AThe%20email%20I%20use%20for%20TestFlight%20/%20Apple%20ID%3A%20%0ADevice%20model%20and%20OS%20version%3A%20%0A">Join on iPhone</a></span>
+        <span class="small d">Already invited on Android? <a href="https://play.google.com/apps/testing/com.zeetapps.journalapp">Open the Google Play test link</a>.</span></span></div>
+      <div class="app" id="againlings"><img class="thumb" src="../againlings/images/01-team-up.webp" alt="" width="88" height="88"><span><strong>Againlings</strong><span class="d">A friendly ghost platformer. Every run you finish becomes a ghost that helps in the next. <a href="../againlings/">About Againlings</a></span>
+        <span class="actions"><a class="btn" href="mailto:zeetforfun@gmail.com?subject=Againlings%20beta%20%28Android%29&body=Hi%2C%20I%20would%20like%20to%20test%20Againlings%20on%20Android.%0A%0AThe%20email%20I%20use%20for%20Google%20Play%3A%20%0ADevice%20model%20and%20OS%20version%3A%20%0A">Join on Android</a><a class="btn" href="mailto:zeetforfun@gmail.com?subject=Againlings%20beta%20%28iPhone%29&body=Hi%2C%20I%20would%20like%20to%20test%20Againlings%20on%20iPhone.%0A%0AThe%20email%20I%20use%20for%20TestFlight%20/%20Apple%20ID%3A%20%0ADevice%20model%20and%20OS%20version%3A%20%0A">Join on iPhone</a></span>
+        <span class="small d">Already invited on Android? <a href="https://play.google.com/apps/testing/org.zeetapps.againlings">Open the Google Play test link</a>.</span></span></div>
+    </div>
+    <p class="small">Your email is used only to invite you to testing and to reply to you. I do not share it and I delete it when testing ends.</p>
   </section>
-  <section class="card" id="againlings" aria-labelledby="h-againlings">
-    <h2 id="h-againlings">Againlings</h2>
-    <p>A friendly ghost platformer. Every run you finish becomes a ghost that helps in the next. <a href="../againlings/">About Againlings</a></p>
-    <p class="row"><a class="btn" href="mailto:zeetforfun@gmail.com?subject=Againlings%20beta%20%28Android%29&body=Hi%2C%20I%20would%20like%20to%20test%20Againlings%20on%20Android.%0A%0AThe%20email%20I%20use%20for%20Google%20Play%3A%20%0ADevice%20model%20and%20OS%20version%3A%20%0A">Join on Android</a> <a class="btn" href="mailto:zeetforfun@gmail.com?subject=Againlings%20beta%20%28iPhone%29&body=Hi%2C%20I%20would%20like%20to%20test%20Againlings%20on%20iPhone.%0A%0AThe%20email%20I%20use%20for%20TestFlight%20/%20Apple%20ID%3A%20%0ADevice%20model%20and%20OS%20version%3A%20%0A">Join on iPhone</a></p>
-    <p>Already invited on Android? <a href="https://play.google.com/apps/testing/org.zeetapps.againlings">Open the Google Play test link</a>.</p>
-  </section>
-  <p>Your email is used only to invite you to testing and to reply to you. I do not share it and I delete it when testing ends. See the <a href="../">developer page</a> for more.</p>
   <footer><a href="../">All Zeet Apps</a> · <a href="mailto:zeetforfun@gmail.com">zeetforfun@gmail.com</a></footer>
 </main>
 </body>

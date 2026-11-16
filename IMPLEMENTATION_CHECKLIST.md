@@ -20,3 +20,4 @@ See docs/DEVELOPER_PAGES_TRACKER.md.
 - [x] WEB-010 Beta testing page (/beta/) for Ragafy, ZeetRecall, Againlings: Android closed testing and iPhone TestFlight interest by email; linked from the landing page
 
 - [x] WEB-011 Richer landing page: hero, app cards with images and status, separate beta-testing section
+- [x] WEB-012 Beta page restyled to match the landing page (hero, card thumbnails)
