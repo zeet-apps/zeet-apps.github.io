@@ -52,4 +52,14 @@ Requirement: Let iPhone testers join Ragafy, ZeetRecall and Againlings directly 
 
 Evidence: Python `HTMLParser` assertions passed for the three public TestFlight mappings, availability copy, email fallback, all six existing Android links and all relative paths. `git diff --check` passed. This static site has no analyzer or test suite.
 
-Next: Publish the commit to `main` and verify the live beta page.
+Publication: `fa70409` was pushed to `main`. The live beta page returned HTTP 200 and matched the committed HTML.
+
+## WEB-014 — Separate Android access from joining (2026-11-18)
+
+Requirement: Each app offers a separate email step to request Android access using the tester’s Google Play email. Testers wait for confirmation before opening the Google Play test link. Both Join buttons lead to their platform’s test link. iPhone public-access and help copy continue to apply.
+
+- [x] Update all three app cards, the Android instructions and the README. Verify the action order, email templates and store destinations.
+
+Evidence: Python `HTMLParser` checks passed for all three request templates, their position before the Join buttons, all six existing store destinations, public iPhone access and help, and relative paths. `git diff --check` passed. This static site has no analyzer or test suite.
+
+Publish to `main` and verify the live HTML against the commit.

@@ -23,3 +23,5 @@ See docs/DEVELOPER_PAGES_TRACKER.md.
 - [x] WEB-012 Beta page restyled to match the landing page (hero, card thumbnails)
 
 - [x] WEB-013 Public TestFlight links with clear availability and email support on the beta page
+
+- [x] WEB-014 Separate Android access requests from the Google Play and TestFlight join buttons
