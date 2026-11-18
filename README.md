@@ -13,7 +13,7 @@ each app, so **do not rename the folders**.
 
 `kids-brain-boost/` (the app's former name, Brain Boost) is kept only as a browser redirect to `zeetquest/` so old store and policy links keep working. It is not a separate app.
 
-Beta testing page (Ragafy, ZeetRecall, Againlings; interest by email): <https://zeet-apps.github.io/beta/>
+Beta testing page for Ragafy, ZeetRecall and Againlings (public TestFlight links on iPhone and closed testing on Android): <https://zeet-apps.github.io/beta/>
 
 Landing page: <https://zeet-apps.github.io/> · Contact: zeetforfun@gmail.com
 

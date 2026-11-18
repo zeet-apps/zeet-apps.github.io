@@ -43,3 +43,13 @@ Publication verification: main806e1b9 deployed. HTTP200 public MP4/caption bytes
 ## WEB-008 / WEB-009 - Againlings pages and gallery (2026-10-24)
 
 Requirement: `/againlings/` (home and store support URL), `/againlings/privacy/`, a landing card and a gallery of real gameplay screenshots at `/againlings/images/`. Source of truth is the app repo (`store/site`, `store/privacy`, `store/site/images`); published with `release site publish` (release-tools `site.images`), which pushes `main` from a fresh clone. Evidence: home, privacy and all 8 images return HTTP 200 (`image/webp`, 25-41 KB each), landing page links to `againlings/`, narrow-width browser view shows a two-column gallery with captions, `app-ads.txt` unchanged. Status: Done and published. This docs-only branch is local.
+
+## WEB-013 — Public iPhone beta links (2026-11-18)
+
+Requirement: Let iPhone testers join Ragafy, ZeetRecall and Againlings directly through public TestFlight links. Explain that no approval is needed while spots are available, and provide an email option if the beta is full or the link fails. Keep Android closed testing through the existing email and Google Play links.
+
+- [x] Update the beta page and README, and verify the three app-to-link mappings, support email and existing Android actions.
+
+Evidence: Python `HTMLParser` assertions passed for the three public TestFlight mappings, availability copy, email fallback, all six existing Android links and all relative paths. `git diff --check` passed. This static site has no analyzer or test suite.
+
+Next: Publish the commit to `main` and verify the live beta page.

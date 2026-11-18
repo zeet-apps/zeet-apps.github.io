@@ -21,3 +21,5 @@ See docs/DEVELOPER_PAGES_TRACKER.md.
 
 - [x] WEB-011 Richer landing page: hero, app cards with images and status, separate beta-testing section
 - [x] WEB-012 Beta page restyled to match the landing page (hero, card thumbnails)
+
+- [x] WEB-013 Public TestFlight links with clear availability and email support on the beta page
